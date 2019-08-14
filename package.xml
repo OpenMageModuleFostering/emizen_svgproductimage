@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+    <name>Emizen_Svgproductimage</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>It will enable to upload .sgv images for products.</summary>
+    <description>Using this extension, user can upload .svg images for products. User can upload via product editor and via import as well.&#xD;
+&#xD;
+</description>
+    <notes>Using this extension, user can upload .svg images for products. User can upload via product editor and via import as well.&#xD;
+</notes>
+    <authors><author><name>Emizen Tech Private Limited</name><user>emizen</user><email>info@emizentech.com</email></author></authors>
+    <date>2015-02-05</date>
+    <time>07:33:25</time>
+    <contents><target name="magelocal"><dir name="Emizen"><dir name="Svgproductimage"><dir><dir name="Helper"><dir name="Catalog"><file name="Image.php" hash="9958619a1df7237321df52d52f5b3188"/></dir><file name="Data.php" hash="96828f9341002109cf120fbcd8b8bc1a"/></dir><dir name="Model"><dir name="Catalog"><dir name="Product"><dir name="Attribute"><dir name="Backend"><file name="Media.php" hash="2e6928d402b91f48809bc4b1ab272b69"/></dir></dir><file name="Image.php" hash="742cf43e0bd301a24f4b8691ae96c0e5"/></dir></dir><dir name="ImportExport"><dir name="Import"><dir name="Entity"><file name="Product.php" hash="05ec4db2caccd484dfe61e0a29a134d7"/></dir><file name="Uploader.php" hash="d810c91e4c3af7cff3e31fd4fa956349"/></dir></dir><file name="Observer.php" hash="913bf3605b47ca87044fa611a42164c9"/></dir><dir name="controllers"><dir name="Adminhtml"><dir name="Catalog"><dir name="Product"><file name="GalleryController.php" hash="b80b02a619918e0145b9b28f8e75ffa2"/></dir></dir></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="b0ac5d5d3c42d0a866e7cb8b70029286"/><file name="config.xml" hash="3042f69620b10878717be2b7c5f1a02d"/><file name="system.xml" hash="2486475b4ddf97c443a0575690518eb0"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Emizen_Svgproductimage.xml" hash="f9715c3e5bd1a48a6a3ac2fd51504cc7"/></dir></target><target name="mage"><dir name="."><file name="catalog_product_20150205_070514.csv" hash="84bebe8de24ac76ce2a8c6f9a67d57f1"/><file name="export_all_products.csv" hash="769b9dd6aca04c6d0917f7c1f201b53c"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

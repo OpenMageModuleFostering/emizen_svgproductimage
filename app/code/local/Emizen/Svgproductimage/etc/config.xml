@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Emizen_Svgproductimage>
+      <version>0.1.0</version>
+    </Emizen_Svgproductimage>
+  </modules>
+  <frontend>
+    <routers>
+      <svgproductimage>
+        <use>standard</use>
+          <args>
+            <module>Emizen_Svgproductimage</module>
+            <frontName>svgproductimage</frontName>
+          </args>
+      </svgproductimage>
+    </routers>
+  </frontend>
+  <global>
+		<rewrite>        
+            <emizen_svgproductimage_adminhtml_catalog_product_gallerycontroller>
+                <from><![CDATA[#^/admin/catalog_product_gallery/#]]></from> <!-- Mage_Adminhtml_Catalog_Product_GalleryController  -->
+                <to>/svgproductimage/adminhtml_catalog_product_gallery/</to> <!-- Emizen_Svgproductimage_Adminhtml_Catalog_Product_GalleryController  -->
+            </emizen_svgproductimage_adminhtml_catalog_product_gallerycontroller>
+		</rewrite>
+    <helpers>
+      <svgproductimage>
+        <class>Emizen_Svgproductimage_Helper</class>
+      </svgproductimage>
+        <catalog>
+			<rewrite>
+				<image>Emizen_Svgproductimage_Helper_Catalog_Image</image>
+            </rewrite>
+        </catalog>
+    </helpers>
+	<models>
+	  <svgproductimage>
+		<class>Emizen_Svgproductimage_Model</class>
+		<resourceModel>svgproductimage_mysql4</resourceModel>
+	  </svgproductimage>
+			<catalog>
+        <rewrite>
+          <product_image>Emizen_Svgproductimage_Model_Catalog_Product_Image</product_image>
+        </rewrite>
+      </catalog>
+      <catalog>
+        <rewrite>
+          <product_attribute_backend_media>Emizen_Svgproductimage_Model_Catalog_Product_Attribute_Backend_Media</product_attribute_backend_media>
+        </rewrite>
+      </catalog>
+      <importexport>
+        <rewrite>
+          <import_uploader>Emizen_Svgproductimage_Model_ImportExport_Import_Uploader</import_uploader>
+        </rewrite>
+      </importexport>
+      <importexport>
+        <rewrite>
+          <import_entity_product>Emizen_Svgproductimage_Model_ImportExport_Import_Entity_Product</import_entity_product>
+        </rewrite>
+      </importexport>
+	</models>
+    <events>
+	  <catalog_product_gallery_prepare_layout> <!-- identifier of the event we want to catch -->
+        <observers>
+          <catalog_product_gallery_prepare_layout_handler> <!-- identifier of the event handler -->
+            <type>model</type> <!-- class method call type; valid are model, object and singleton -->
+            <class>svgproductimage/observer</class> <!-- observers class alias -->
+            <method>setFlexUploaderConfig</method>  <!-- observer's method to be called -->
+            <args></args> <!-- additional arguments passed to observer -->
+          </catalog_product_gallery_prepare_layout_handler>
+        </observers>
+      </catalog_product_gallery_prepare_layout>
+      
+    </events>
+  </global>
+  <admin>
+	<routers>
+	  <svgproductimage>
+	    <use>admin</use>
+		<args>
+		  <module>Emizen_Svgproductimage</module>
+		  <frontName>admin_svgproductimage</frontName>
+		</args>
+	  </svgproductimage>
+	</routers>
+  </admin>
+</config> 
