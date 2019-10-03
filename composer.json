@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Emizen_Svgproductimage",
+    "name": "openmage-module-fostering\/emizen_svgproductimage",
     "type": "magento-module",
-    "license": "OSL-v3.0",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "It will enable to upload .sgv images for products.",
     "authors": [
